@@ -1,0 +1,26 @@
+h6{
+    font-weight: bold;
+}
+
+.vlFirst{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.vl {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-left: 1px solid #b7c2d0;
+}
+
+.qr{
+    width: 60%;
+}
+
+.card{
+    padding: 15px;
+}
+hr{
+    margin: 0;
+}

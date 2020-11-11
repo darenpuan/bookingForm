@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="https://kit.fontawesome.com/21e9e8080b.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/main.js"></script>
+
+</head>
+<body>
+<div class="container mt-3 ml-5 mr-5 col-8" style="">
+    <div class="card">
+        <div class="card-inner p-2">
+            <div class="row">
+                <div class="col-6 vlFirst">
+                    <h6>Shipper</h6>
+                    <textarea name="" id="shipperDets" cols="20" rows="4" class="form-control"
+                              placeholder="Shipper Name \nAddress Line 1 \nAddress Line 2 \nContact Number"></textarea>
+                </div>
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-6 vl">
+                            <div class="row">
+                                <div class="col-6 my-auto">
+                                    <h6>Reference</h6>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control-plaintext" readonly value="73261">
+                                </div>
+                                <img src="img/frame.png" alt="" class="qr">
+                            </div>
+
+                        </div>
+                        <div class="col-6 vl">
+                            <h6>Export Declaration No.</h6>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-6 vlFirst">
+                    <h6>Consignee</h6>
+                    <textarea name="" id="consigneeDets" cols="20" rows="5" class="form-control"
+                              placeholder="Shipper Name \nAddress Line 1 \nAddress Line 2 \nContact Number \nEmail "></textarea>
+                </div>
+                <div class="col-6 vl">
+                    <h6>Forwarding Agent</h6>
+                    <div>
+                        <p>Auto Populated from System.</p>
+                        <p>Transporter Details</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-6 vlFirst">
+                    <div class="row">
+                        <div class="col-6 my-auto">
+                            <h6>Type of Shipment</h6>
+                        </div>
+                        <div class="col-6">
+                            <select name="shipmentType" id="shipmentType" class="form-control">
+                                <option value="0">Please Select an option</option>
+                                <option value="1">Air</option>
+                                <option value="2">Sea</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-6 my-auto">
+                            <h6>Vessel/ Aircraft Voyage</h6>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 vl">
+                    <div class="row">
+                        <div class="col-6 my-auto">
+                            <h6>Country of Origin of Goods</h6>
+                        </div>
+                        <div class="col-6">
+                            <select name="outCountry" id="outCountry" class="form-control">
+                                <option value="0">Please Select an option</option>
+                                <option value="1">Malaysia</option>
+                                <option value="2">Japan</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-6 my-auto">
+                            <h6>Country of Final Destination</h6>
+                        </div>
+                        <div class="col-6">
+                            <select name="inCountry" id="inCountry" class="form-control">
+                                <option value="0">Please Select an option</option>
+                                <option value="1">Singapore</option>
+                                <option value="2">Japan</option>
+                            </select>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-6 vlFirst">
+                    <div class="row">
+                        <div class="col-6 my-auto">
+                            <h6>Port of Loading</h6>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-6 my-auto">
+                            <h6>Port of Discharge</h6>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 vl">
+                    <div class="row">
+                        <div class="col-6 my-auto">
+                            <h6>Date of Departure</h6>
+                        </div>
+                        <div class="col-6">
+                            <input type="date" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-6 my-auto">
+                            <h6>Final Destination</h6>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <h5 style="font-weight: bold">FORWARDER TO ARRANGE</h5>
+            </div>
+            <hr>
+            <div class="row">
+                <!-- Editable table -->
+                <div id="table" class="table-editable">
+                  <span class="table-add float-right mb-3 mr-2">
+                      <a href="#!" class="text-success"><i
+                              class="fas fa-plus fa-2x" aria-hidden="true"></i></a>
+                  </span>
+                    <table class="table table-bordered table-responsive-md table-striped text-center">
+                        <thead>
+                        <tr>
+                            <th class="text-center">Marks and Numbers</th>
+                            <th class="text-center">No & Kind of Packages</th>
+                            <th class="text-center">Description of Goods</th>
+                            <th class="text-center">Weight</th>
+                            <th class="text-center">Measurement</th>
+                            <th class="text-center">Sort</th>
+                            <th class="text-center">Remove</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="pt-3-half" contenteditable="true">Description of Cargo</td>
+                            <td class="pt-3-half" contenteditable="true">Packaging Type</td>
+                            <td class="pt-3-half" contenteditable="true">Bar Stool and Bar Tables</td>
+                            <td class="pt-3-half" contenteditable="true">20Kg</td>
+                            <td class="pt-3-half" contenteditable="true">2m x 0.5m</td>
+                            <td class="pt-3-half">
+                                <span class="table-up">
+                                  <a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-up"
+                                                                      aria-hidden="true"></i></a>
+                                </span>
+                                <span class="table-down">
+                                    <a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-down"
+                                                                        aria-hidden="true"></i></a>
+                                </span>
+                            </td>
+                            <td>
+                              <span class="table-remove">
+                                  <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button>
+                              </span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12 vlFirst">
+                    <div class="row">
+                        <div class="col-7 my-auto">
+                            <h6>Does this shipment contain hazardous/ dangerous goods</h6>
+                        </div>
+                        <div class="col-4">
+                            <select name="dangerGoods" id="danger" class="form-control">
+                                <option value="0">Please Select an option</option>
+                                <option value="1">Yes</option>
+                                <option value="2">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12 vlFirst">
+                    <div class="row">
+                <div class="col-3">
+                    <h6>Remarks</h6>
+                </div>
+                <div class="col-8">
+                    <textarea name="" id="" class="form-control" cols="15" rows="5"></textarea>
+                </div>
+            </div>
+            </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">By submitting you agree that... Lorem ipsum dolor sit amet, consectetur adipisicin fficia voluptate voluptatem!</label>
+                </div>
+            </div>
+        <div class="row">
+            <button class="btn btn-secondary col-2 offset-7 mt-2 mr-1">Cancel</button>
+            <button class="btn btn-primary col-2 mt-2">Submit</button>
+        </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    var textAreas = document.getElementsByTagName('textarea');
+
+    Array.prototype.forEach.call(textAreas, function (elem) {
+        elem.placeholder = elem.placeholder.replace(/\\n/g, '\n');
+    });
+</script>
+<script>
+    const $tableID = $('#table');
+    const $BTN = $('#export-btn');
+    const $EXPORT = $('#export');
+
+    const newTr = `
+<tr class="hide">
+  <td class="pt-3-half" contenteditable="true"></td>
+  <td class="pt-3-half" contenteditable="true"></td>
+  <td class="pt-3-half" contenteditable="true"></td>
+  <td class="pt-3-half" contenteditable="true"></td>
+  <td class="pt-3-half" contenteditable="true"></td>
+  <td class="pt-3-half">
+    <span class="table-up"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a></span>
+    <span class="table-down"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></a></span>
+  </td>
+  <td>
+    <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0 waves-effect waves-light">Remove</button></span>
+  </td>
+</tr>`;
+
+    $('.table-add').on('click', 'i', () => {
+
+        const $clone = $tableID.find('tbody tr').last().clone(true).removeClass('hide table-line');
+
+        if ($tableID.find('tbody tr').length === 0) {
+
+            $('tbody').append(newTr);
+        }
+
+        $tableID.find('table').append($clone);
+    });
+
+    $tableID.on('click', '.table-remove', function () {
+
+        $(this).parents('tr').detach();
+    });
+
+    $tableID.on('click', '.table-up', function () {
+
+        const $row = $(this).parents('tr');
+
+        if ($row.index() === 0) {
+            return;
+        }
+
+        $row.prev().before($row.get(0));
+    });
+
+    $tableID.on('click', '.table-down', function () {
+
+        const $row = $(this).parents('tr');
+        $row.next().after($row.get(0));
+    });
+
+    // A few jQuery helpers for exporting only
+    jQuery.fn.pop = [].pop;
+    jQuery.fn.shift = [].shift;
+
+    $BTN.on('click', () => {
+
+        const $rows = $tableID.find('tr:not(:hidden)');
+        const headers = [];
+        const data = [];
+
+        // Get the headers (add special header logic here)
+        $($rows.shift()).find('th:not(:empty)').each(function () {
+
+            headers.push($(this).text().toLowerCase());
+        });
+
+        // Turn all existing rows into a loopable array
+        $rows.each(function () {
+            const $td = $(this).find('td');
+            const h = {};
+
+            // Use the headers from earlier to name our hash keys
+            headers.forEach((header, i) => {
+
+                h[header] = $td.eq(i).text();
+            });
+
+            data.push(h);
+        });
+
+        // Output the result
+        $EXPORT.text(JSON.stringify(data));
+    });
+</script>
+</html>
