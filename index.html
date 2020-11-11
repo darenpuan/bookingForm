@@ -17,7 +17,44 @@
 
 </head>
 <body>
-<div class="container mt-3 ml-5 mr-5 col-8" style="">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">Booking System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <!--                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-3 offset-3 col-9" style="">
+    <div class="card p-5 mb-2">
+        <form>
+            <div class="form-group row">
+                <label for="date" class="col-form-label col-6">Date Selected</label>
+                <input type="text" id="date" class="form-control-plaintext col-6" readonly value="12 November 2020">
+            </div>
+            <div class="form-group row">
+                <label for="time" class="col-form-label col-6">Time Slot Selected</label>
+                <input type="text" id="time" class="form-control-plaintext col-6" readonly value="09:00 AM">
+            </div>
+            <div class="form-group row">
+                <label for="upload" class="col-form-label col-6">Bill of Lading</label>
+                <div class="custom-file col-6">
+                    <label for="upload" class="custom-file-label">Upload Bill of Lading</label>
+                    <input type="file" id="upload" class="custom-file-input">
+                </div>
+            </div>
+        </form>
+
+    </div>
     <div class="card">
         <div class="card-inner p-2">
             <div class="row">
@@ -111,142 +148,149 @@
                             </select>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-6 vlFirst">
+                <div class="row">
+                    <div class="col-6 my-auto">
+                        <h6>Port of Loading</h6>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-6 my-auto">
+                        <h6>Port of Discharge</h6>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control">
                     </div>
                 </div>
             </div>
-            <hr>
-            <div class="row">
-                <div class="col-6 vlFirst">
-                    <div class="row">
-                        <div class="col-6 my-auto">
-                            <h6>Port of Loading</h6>
-                        </div>
-                        <div class="col-6">
-                            <input type="text" class="form-control">
-                        </div>
+            <div class="col-6 vl">
+                <div class="row">
+                    <div class="col-6 my-auto">
+                        <h6>Date of Departure</h6>
                     </div>
-                    <div class="row mt-1">
-                        <div class="col-6 my-auto">
-                            <h6>Port of Discharge</h6>
-                        </div>
-                        <div class="col-6">
-                            <input type="text" class="form-control">
-                        </div>
+                    <div class="col-6">
+                        <input type="date" class="form-control">
                     </div>
                 </div>
-                <div class="col-6 vl">
-                    <div class="row">
-                        <div class="col-6 my-auto">
-                            <h6>Date of Departure</h6>
-                        </div>
-                        <div class="col-6">
-                            <input type="date" class="form-control">
-                        </div>
+                <div class="row mt-1">
+                    <div class="col-6 my-auto">
+                        <h6>Final Destination</h6>
                     </div>
-                    <div class="row mt-1">
-                        <div class="col-6 my-auto">
-                            <h6>Final Destination</h6>
-                        </div>
-                        <div class="col-6">
-                            <input type="text" class="form-control">
-                        </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control">
                     </div>
                 </div>
             </div>
-            <hr>
-            <div class="row">
-                <h5 style="font-weight: bold">FORWARDER TO ARRANGE</h5>
+        </div>
+        <hr>
+        <div class="row p-2">
+            <h5 style="font-weight: bold">FORWARDER TO ARRANGE</h5>
+        </div>
+        <hr>
+        <div class="row p-2">
+            <!-- Editable table -->
+            <div id="table" class="table-editable">
+                  <span class="table-add float-left mb-3 mr-2">
+                     <div class="form-group row">
+                <label for="name" class="col-form-label col-6">Cargo Name</label>
+                <input type="text" id="name" class="form-control col-6">
             </div>
-            <hr>
-            <div class="row">
-                <!-- Editable table -->
-                <div id="table" class="table-editable">
-                  <span class="table-add float-right mb-3 mr-2">
+                  </span>
+                <span class="table-add float-right mb-3 mr-2">
                       <a href="#!" class="text-success"><i
                               class="fas fa-plus fa-2x" aria-hidden="true"></i></a>
                   </span>
-                    <table class="table table-bordered table-responsive-md table-striped text-center">
-                        <thead>
-                        <tr>
-                            <th class="text-center">Marks and Numbers</th>
-                            <th class="text-center">No & Kind of Packages</th>
-                            <th class="text-center">Description of Goods</th>
-                            <th class="text-center">Weight</th>
-                            <th class="text-center">Measurement</th>
-                            <th class="text-center">Sort</th>
-                            <th class="text-center">Remove</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td class="pt-3-half" contenteditable="true">Description of Cargo</td>
-                            <td class="pt-3-half" contenteditable="true">Packaging Type</td>
-                            <td class="pt-3-half" contenteditable="true">Bar Stool and Bar Tables</td>
-                            <td class="pt-3-half" contenteditable="true">20Kg</td>
-                            <td class="pt-3-half" contenteditable="true">2m x 0.5m</td>
-                            <td class="pt-3-half">
-                                <span class="table-up">
-                                  <a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-up"
-                                                                      aria-hidden="true"></i></a>
-                                </span>
-                                <span class="table-down">
-                                    <a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-down"
-                                                                        aria-hidden="true"></i></a>
-                                </span>
-                            </td>
-                            <td>
+                <table class="table table-bordered table-responsive-md table-striped text-center">
+                    <thead>
+                    <tr>
+                        <th class="text-center">Marks and Numbers</th>
+                        <th class="text-center">No & Kind of Packages</th>
+                        <th class="text-center">Description of Goods</th>
+                        <th class="text-center">Weight</th>
+                        <th class="text-center">Measurement</th>
+                        <!--                            <th class="text-center">Sort</th>-->
+                        <th class="text-center">Remove</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="pt-3-half" contenteditable="true">Description of Cargo</td>
+                        <td class="pt-3-half" contenteditable="true">Packaging Type</td>
+                        <td class="pt-3-half" contenteditable="true">Bar Stool and Bar Tables</td>
+                        <td class="pt-3-half" contenteditable="true">20Kg</td>
+                        <td class="pt-3-half" contenteditable="true">2m x 0.5m</td>
+                        <!--                            <td class="pt-3-half">-->
+                        <!--                                <span class="table-up">-->
+                        <!--                                  <a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-up"-->
+                        <!--                                                                      aria-hidden="true"></i></a>-->
+                        <!--                                </span>-->
+                        <!--                                <span class="table-down">-->
+                        <!--                                    <a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-down"-->
+                        <!--                                                                        aria-hidden="true"></i></a>-->
+                        <!--                                </span>-->
+                        <!--                            </td>-->
+                        <td>
                               <span class="table-remove">
                                   <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button>
                               </span>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
-            <hr>
-            <div class="row">
-                <div class="col-12 vlFirst">
-                    <div class="row">
-                        <div class="col-7 my-auto">
-                            <h6>Does this shipment contain hazardous/ dangerous goods</h6>
-                        </div>
-                        <div class="col-4">
-                            <select name="dangerGoods" id="danger" class="form-control">
-                                <option value="0">Please Select an option</option>
-                                <option value="1">Yes</option>
-                                <option value="2">No</option>
-                            </select>
-                        </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-12 vlFirst">
+                <div class="row">
+                    <div class="col-7 my-auto">
+                        <h6>Does this shipment contain hazardous/ dangerous goods</h6>
+                    </div>
+                    <div class="col-4">
+                        <select name="dangerGoods" id="danger" class="form-control">
+                            <option value="0">Please Select an option</option>
+                            <option value="1">Yes</option>
+                            <option value="2">No</option>
+                        </select>
                     </div>
                 </div>
             </div>
-            <hr>
-            <div class="row">
-                <div class="col-12 vlFirst">
-                    <div class="row">
-                <div class="col-3">
-                    <h6>Remarks</h6>
-                </div>
-                <div class="col-8">
-                    <textarea name="" id="" class="form-control" cols="15" rows="5"></textarea>
-                </div>
-            </div>
-            </div>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                    <label class="custom-control-label" for="customCheck1">By submitting you agree that... Lorem ipsum dolor sit amet, consectetur adipisicin fficia voluptate voluptatem!</label>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-12 vlFirst">
+                <div class="row">
+                    <div class="col-3">
+                        <h6>Remarks</h6>
+                    </div>
+                    <div class="col-8">
+                        <textarea name="" id="" class="form-control" cols="15" rows="5"></textarea>
+                    </div>
                 </div>
             </div>
+        </div>
+        <hr>
+        <div class="row p-2">
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">By submitting you agree that... Lorem ipsum dolor
+                    sit amet, consectetur adipisicin fficia voluptate voluptatem!</label>
+            </div>
+        </div>
         <div class="row">
             <button class="btn btn-secondary col-2 offset-7 mt-2 mr-1">Cancel</button>
             <button class="btn btn-primary col-2 mt-2">Submit</button>
         </div>
-        </div>
     </div>
+</div>
 </div>
 </body>
 <script>
